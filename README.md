@@ -29,16 +29,22 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `Overview`
+This project implements an infinite scroll table using React and Material-UI. The table displays data of different colleges and provides functionality to sort by collegedunia rating, fees, and user review rating in ascending and descending order. Additionally, it allows searching for colleges by name.
+### Features
+.Table layout displaying college data
+.Infinite scroll functionality
+.Display of featured flag for colleges with truthy featured value
+.Sorting by collegedunia rating, fees, and user review rating
+.Ascending and descending order sorting
+.College search by name
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Implementation Details
+The project is built using React JS and Material-UI components. It utilizes dummy JSON data of colleges to populate the table. The infinite scroll functionality is achieved by dynamically loading additional rows as the user scrolls down the table.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
+## Dependencies
+. React JS
+. Material-UI
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
