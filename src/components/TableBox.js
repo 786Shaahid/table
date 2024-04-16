@@ -2,7 +2,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Avatar, Box, Button, Car
 import React from 'react'
 import { Table, TableHead, TableBody, TableRow, TableCell, TableContainer } from '@mui/material';
 import { blue, red, yellow } from '@mui/material/colors';
-import { ArrowDownward, ArrowForward, ArrowLeft, CompareArrows, CurrencyRupee, Download, FiberManualRecord } from '@mui/icons-material';
+import { ArrowDownward, ArrowForward, ArrowLeft, Check, CompareArrows, CurrencyRupee, Download, FiberManualRecord, KeyboardArrowDown } from '@mui/icons-material';
 
 
 function TableBox() {
@@ -27,7 +27,7 @@ function TableBox() {
         best:"Best In Social Life"
       },
       ranking:{
-        rank:'3ed/131 in india',
+        rank:'3rd/131 in india',
         year:'2023',
         media:{
            
@@ -125,18 +125,17 @@ function TableBox() {
                   <Typography variant='subtitle1' fontSize={'13px'} sx={{ color:yellow[800]  }}><FiberManualRecord/> <Typography variant='h6' component={'span'}>{data.reviewInfo.rating}/10</Typography></Typography>
                   <Typography variant='subtile2'  fontSize={'13px'}>{data.reviewInfo.based}</Typography>
                   <Typography variant='subtitle2' fontSize={'13px'}>  </Typography>
-                  <Button startIcon={<CompareArrows/>} sx={{fontSize:'13px', color:yellow[800]  }}>Compare Fees</Button>
+                  <Button startIcon={<Check/>} endIcon={<KeyboardArrowDown/>} disabled sx={{fontSize:'10px', width:'10rem',bgcolor:'yellow'}}  >{data.reviewInfo.best} </Button>
+
                </Stack>
 
             </TableCell>
             <TableCell style={{ border: '1px solid black',padding:0 }}>
-               <Stack marginTop='-3.5rem' p={'2px'}>
-                  <Typography variant='subtitle1' sx={{ color:yellow[800]  }}><CurrencyRupee fontSize='10px'/>{data.fees}</Typography>
-                  <Typography variant='subtile2' >BE/B.Tech</Typography>
-                  <Typography variant='subtitle2'>-1st Year Fees</Typography>
-                  <Button startIcon={<CompareArrows/>} sx={{fontSize:'13px', color:yellow[800]  }}>Compare Fees</Button>
+            <Stack marginTop='-3.5rem' p={'2px'}>
+                  <Typography variant='subtitle1' fontSize={'13px'} sx={{ color:yellow[800]  }}><FiberManualRecord/> <Typography variant='h6' component={'span'}>{data.ranking.rank}</Typography></Typography>
+                  <Typography variant='subtile2'  fontSize={'13px'}>{data.ranking.year}</Typography>
+                  <Typography variant='subtitle2' fontSize={'13px'}>  </Typography>
                </Stack>
-
             </TableCell>
           </TableRow>
          
